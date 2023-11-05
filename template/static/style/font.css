@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "VK Sans Display Regular";
+    src: url("https://db.onlinewebfonts.com/t/5795a47e252d16c82bb79fa354b224db.eot");
+    src: url("https://db.onlinewebfonts.com/t/5795a47e252d16c82bb79fa354b224db.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/5795a47e252d16c82bb79fa354b224db.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/5795a47e252d16c82bb79fa354b224db.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/5795a47e252d16c82bb79fa354b224db.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/5795a47e252d16c82bb79fa354b224db.svg#VK Sans Display Regular")format("svg");
+}

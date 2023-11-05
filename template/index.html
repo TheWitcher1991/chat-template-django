@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Чаты</title>
+
+    <link rel="stylesheet" href="./static/libs/FontAwesome/css/all.min.css">
+
+    <link rel="stylesheet" href="./static/style/font.css">
+    <link rel="stylesheet" href="./static/style/vars.css">
+    <link rel="stylesheet" href="./static/style/normalize.css">
+    <link rel="stylesheet" href="./static/style/wrapper.css">
+</head>
+<body>
+
+<main id="wrapper" class="wrapper">
+
+    <section class="chat__list">
+
+        <div class="header__block">
+            <div class="chat__title">
+                <span><img src="./static/image/logo.png" alt=""> Месенджер</span>
+                <div class="chat__bth">
+                    <i class="fa-light fa-clock-rotate-left"></i>
+                    <i class="fa-light fa-pen-to-square"></i>
+                </div>
+            </div>
+            <label class="search__label" for="search">
+                <i class="fa-regular fa-magnifying-glass"></i>
+                <input type="text" id="search" class="search" placeholder="Поиск">
+            </label>
+            <div class="chat__tabs">
+                <div data-tab="1" id="tabs__1" class="tabs__name tabs__active">
+                    Месенджер
+                </div>
+                <div data-tab="2" id="tabs__2" class="tabs__name">
+                    Каналы
+                </div>
+                <div data-tab="3" id="tabs__3" class="tabs__name">
+                    Личные
+                </div>
+                <div data-tab="3" id="tabs__3" class="tabs__name">
+                    Временные
+                </div>
+            </div>
+        </div>
+
+        <div class="chat__content">
+            <ul class="chat__content-ul">
+            </ul>
+        </div>
+
+        <div class="chat__menu">
+            <a class="global__href" href="">
+                <i class="fa-light fa-rectangle-vertical-history"></i>
+                Истории
+            </a>
+            <a class="global__href active__href" href="">
+                <i class="fa-light fa-comments"></i>
+                Месенджер
+            </a>
+            <a class="global__href" href="">
+                <i class="fa-light fa-gear"></i>
+                Настройки
+            </a>
+        </div>
+
+    </section>
+
+</main>
+
+<script>
+
+    const CHAT = [
+        { fixed: true, name: 'Вова', time: '20:35', text: 'Образец документа для подтверждения юридического...', count: 12, img: '52af846c-0649-49e9-9697-6583ec73eac6.jpg' },
+        { fixed: false, name: 'Вова', time: '20:35', text: 'Образец документа для подтверждения юридического...', count: 12, img: '52af846c-0649-49e9-9697-6583ec73eac6.jpg' },
+        { fixed: false, name: 'Вова', time: '20:35', text: 'Образец документа для подтверждения юридического...', count: 12, img: '52af846c-0649-49e9-9697-6583ec73eac6.jpg' },
+        { fixed: false, name: 'Вова', time: '20:35', text: 'Образец документа для подтверждения юридического...', count: 12, img: '52af846c-0649-49e9-9697-6583ec73eac6.jpg' },
+        { fixed: false, name: 'Вова', time: '20:35', text: 'Образец документа для подтверждения юридического...', count: 12, img: '52af846c-0649-49e9-9697-6583ec73eac6.jpg' },
+        { fixed: false, name: 'Вова', time: '20:35', text: 'Образец документа для подтверждения юридического...', count: 12, img: '52af846c-0649-49e9-9697-6583ec73eac6.jpg' },
+        { fixed: false, name: 'Вова', time: '20:35', text: 'Образец документа для подтверждения юридического...', count: 12, img: '52af846c-0649-49e9-9697-6583ec73eac6.jpg' },
+        { fixed: false, name: 'Вова', time: '20:35', text: 'Образец документа для подтверждения юридического...', count: 12, img: '52af846c-0649-49e9-9697-6583ec73eac6.jpg' },
+        { fixed: false, name: 'Вова', time: '20:35', text: 'Образец документа для подтверждения юридического...', count: 12, img: '52af846c-0649-49e9-9697-6583ec73eac6.jpg' },
+        { fixed: false, name: 'Вова', time: '20:35', text: 'Образец документа для подтверждения юридического...', count: 12, img: '52af846c-0649-49e9-9697-6583ec73eac6.jpg' },
+        { fixed: false, name: 'Вова', time: '20:35', text: 'Образец документа для подтверждения юридического...', count: 12, img: '52af846c-0649-49e9-9697-6583ec73eac6.jpg' },
+        { fixed: false, name: 'Вова', time: '20:35', text: 'Образец документа для подтверждения юридического...', count: 12, img: '52af846c-0649-49e9-9697-6583ec73eac6.jpg' },
+        { fixed: false, name: 'Вова', time: '20:35', text: 'Образец документа для подтверждения юридического...', count: 12, img: '52af846c-0649-49e9-9697-6583ec73eac6.jpg' }
+    ]
+
+    CHAT.forEach(({fixed, name, time, text, count, img}) => {
+        document.querySelector('.chat__content-ul').innerHTML += `
+          <li class="chat__item" data-chat="1">
+            <a class="chat__href" href="">
+                        <span class="chat__img">
+                            <img src="./static/image/users/${img}" alt="chat">
+                        </span>
+                <div class="chat__ctx">
+                    <div class="chat__top">
+                        <span class="chat__top-name">${name}</span>
+                        <span class="chat__top-time">${time}</span>
+                    </div>
+                    <div class="chat__bot">
+                        <span class="chat__bot-text">${text}</span>
+                        <div class="chat__pin">
+                            ${fixed ? '<i class="fa-solid fa-thumbtack"></i>' : ''}
+                            <span class="chat__bot-count">${count}</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        `
+    })
+
+
+
+</script>
+
+</body>
+</html>
